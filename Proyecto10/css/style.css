@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.logo{
+    max-width: 28rem;
+    margin-left: 5px;
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    background-color: rgba(0, 255, 255, 0.84);
+}
+body{
+    background-color: black;
+}
+.listaMenu{
+    list-style-type: none;
+    display: flex;
+    gap: 1rem;
+}
+.listaMenu li a {
+    text-decoration: none;
+    color: #1c1c1c;
+    font-size: 30px;
+    margin-right: 12px;  
+}
+.abrirMenu,
+.cerrarMenu{
+    display: none;   
+}
+
+@media screen and (max-width: 500px){
+    .menuPrincipal {
+        display: flex;
+        opacity: 0;
+        visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap: 1.5rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color: black;
+        padding: 2rem;
+        box-shadow:  0 0 0 100vmax rgba(0, 0, 0, 0.7);
+        }
+    .abrirMenu,
+    .cerrarMenu{
+        display: block;
+        border: none;
+        font-size: 2.5rem;
+        cursor: pointer;
+        background-color: rgba(0, 0, 0, 0.505);
+    }
+    .cerrarMenu{
+        background-color: transparent;
+        color:white;
+    }
+    .menuPrincipal.visible{
+        opacity: 2;
+        visibility: visible;
+    }
+    .listaMenu{
+        flex-direction: column;
+        align-items: end;
+    }
+    .listaMenu li a {
+        color: white;
+    }
+}
